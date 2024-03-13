@@ -1,0 +1,89 @@
+//*----------------------------
+//** Game collection item
+//*----------------------------
+
+.game-item {
+    // background-image: url(../images/game/bg1.svg);
+    background-size: cover;
+    background-position: center;
+    height: 330px;
+    transition: $transition;
+
+
+
+    .game-item-inner {
+        @extend %rel;
+        @extend %flex;
+        @extend %align-items-center;
+        @extend %justify-center;
+        @extend %h-100;
+
+
+        &.bg-1 {
+            background: rgb(0, 0, 0);
+            background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+        }
+
+        &.bg-2 {
+            background: rgb(0, 0, 0);
+            background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+        }
+
+        &.bg-3 {
+            background: rgb(0, 0, 0);
+            background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+        }
+
+
+        &.bg-4 {
+            background: rgb(0, 0, 0);
+            background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+        }
+
+        &.bg-5 {
+            background: #000000;
+            background: radial-gradient(circle, #000000 0%, #000000 100%);
+        }
+
+        &.bg-6 {
+            background: #000000;
+            background: radial-gradient(circle, #000000 0%, #000000 100%);
+        }
+
+        &.bg-7 {
+            background: #000000;
+            background: radial-gradient(circle, #000000 0%, #000000 100%);
+        }
+
+        &.bg-8 {
+            background: #000000;
+            background: radial-gradient(circle, #000000 0%, #000000 100%);
+        }
+
+          
+    }
+
+    .game-overlay {
+        @extend %abs;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .45s cubic-bezier(.68, -0.55, .27, 1.55);
+        display: grid;
+        place-content: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        background-color: rgba($black-color, $alpha: .80)
+    }
+
+    &:hover {
+        .game-overlay {
+            visibility: visible;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+
+        }
+    }
+}
